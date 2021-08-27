@@ -1,0 +1,71 @@
+$light-white: #F2FAFF;
+
+$light-blue: #1F88D4;
+$lighter-blue: #00B4FF;
+
+//Just to save my eyes when developing at night
+$dark-grey: #3D4756;
+
+$black: #000000;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px, 10/16 = 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  background-color: $dark-grey;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 6rem;
+  background: linear-gradient(45deg, $light-blue, $lighter-blue);
+  padding: 1rem;
+  position: relative;
+
+  &__logo-box {
+    padding-left: 1rem;
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  &__logo {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  &__title-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    padding: 0.5rem 1rem;
+    color: $light-white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, #922A55, #CB5F87);
+    background-size: 0% .3rem;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size .3s ease;
+
+    &:hover {
+      background-size: 100% .3rem;
+    }
+  }
+}
