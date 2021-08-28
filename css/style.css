@@ -16,9 +16,8 @@ body {
 .nav-bar {
   display: flex;
   flex-direction: row;
-  width: 100%;
   height: 6rem;
-  background: linear-gradient(45deg, #1F88D4, #00B4FF);
+  background: linear-gradient(45deg, #00B4FF, #1F88D4);
   padding: 1rem;
   position: relative; }
   .nav-bar__logo-box {
@@ -38,10 +37,40 @@ body {
     color: #F2FAFF;
     font-size: 2.5rem;
     text-transform: uppercase;
-    background-image: linear-gradient(90deg, #922A55, #CB5F87);
+    background-image: linear-gradient(90deg, #CB5F87, #922A55);
     background-size: 0% .3rem;
     background-repeat: no-repeat;
     background-position: left bottom;
     transition: background-size .3s ease; }
     .nav-bar__title:hover {
       background-size: 100% .3rem; }
+
+.line-chart-session {
+  margin: 4rem auto;
+  max-width: 80%;
+  position: relative; }
+  .line-chart-session__chart-container {
+    background: #F2FAFF;
+    padding: 2rem; }
+  .line-chart-session__tooltip {
+    position: absolute; }
+
+.session-title {
+  font-size: 3rem;
+  color: #F2FAFF;
+  letter-spacing: .2rem;
+  transition: all .3s;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-weight: bold; }
+  .session-title:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+.session-description {
+  font-size: 1.7rem;
+  color: #F2FAFF;
+  line-height: 2.2rem;
+  letter-spacing: .05rem;
+  margin-bottom: 3rem; }
