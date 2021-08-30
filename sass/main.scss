@@ -82,6 +82,12 @@ body {
   &__tooltip {
     position: absolute;
   }
+
+  &__chart-table {
+    font-size: 1.7rem;
+    width: 100%;
+    background: $light-white;
+  }
 }
 
 .session-title {
@@ -106,4 +112,43 @@ body {
   line-height: 2.2rem;
   letter-spacing: .05rem;
   margin-bottom: 3rem;
+}
+
+#chartjs-tooltip {
+  padding: 1rem;
+  border: .1rem solid;
+  background: $light-white;
+  border-radius: .215rem;
+  box-shadow: 0 0 1rem 0rem rgba($black, .05);
+}
+
+.chartjs-tooltip__title {
+  font-size: 1.8rem;
+  text-align: left;
+  color: $dark-grey;
+  padding-bottom: .5rem;
+  border-bottom: .1rem solid rgba($black, .05);
+  font-weight: bold;
+}
+
+.chartjs-tooltip__information {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.chartjs-tooltip__user {
+  padding: .5rem 0;
+}
+
+.chartjs-tooltip__user-percent {
+  font-size: 1.2rem;
+}
+
+.chartjs-tooltip__user-color {
+  display: inline-block;
+  border-width: .2rem;
+  width: 1rem;
+  height: 1rem;
+  border: .1rem solid;
+  margin-right: .5rem;
 }

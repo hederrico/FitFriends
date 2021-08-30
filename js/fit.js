@@ -108,6 +108,48 @@ const labels = [
   '27/Ago',
   '28/Ago',
 ];
+
+const usersData = [
+  [
+    80.45, 80.45, 78.60, 78.85, 78.70, 78.35, 78.80,
+    79.25, 79.25, 78.90, 78.70, 78.60, 78.20, 78.20,
+    78.70, 78.45, 78.00, 77.65, 77.65, 77.90, 77.55,
+    77.65, 78.05, 77.85, 78.00, 77.30, 76.75, 76.75,
+    76.75, 77.30, 76.70, 76.10, 76.60, 77.40, 76.65,
+    76.70, 76.40, 76.05, 75.90, 75.80, 75.65, 74.95,
+    76.00, 76.10, 76.20, 75.35, 75.55, 75.20, 74.55,
+    75.20, 75.15, 74.75, 74.75, 74.45, 74.70, 74.70,
+    74.80, 74.60, 74.85, 74.30, 74.20, 74.60, 74.15,
+    74.15, 74.95, 74.15, 74.30, 74.45, 74.10, 74.10,
+    74.45, 74.65, 74.65, 73.90, 73.80, 73.40, 73.70,
+    74.05, 73.75, 73.75, 73.65, 73.70, 73.70, 74.20,
+    74.15, 75.00, 74.05, 73.85, 73.55, 73.80, 73.40,
+    73.85, 75.10, 74.55, 73.75, 74.25, 73.80, 74.35,
+    74.85, 74.95, 74.35, 74.35, 74.90, 74.60, 74.80
+  ],
+  [
+    , , , , , , , , , , , , , , , , , , , , , , , , , , ,
+    , , , , , , , , , , , , , , , , , , , , , , , , , , ,
+    , , , , , , , , , , , , ,
+    73.1, 73.1, 73.7, 73.7, 73.3, 72.9, 72.4, 72.4, 72.4,
+    72.4, 72.9, 72.9, 72.9, 72.4, 72.2, 72.4, 72.4, 72.5,
+    72.5, 72.3, 72.6, 72.4, 72.4, 72.0, 72.0, 71.9, 71.9,
+    71.6, 71.8, 71.9, 71.9, , 72.2, 71.8, 71.5, 71.6,
+    71.5, 71.4
+  ],
+  [
+    , , , , , , , , , , , , , , , , , , , , , , , , , , ,
+    , , , , , , , , , , , , , , , , , ,
+    109.0, 107.6, 107.0, 107.0, 107.0, 108.0, 107.8, 105.8,
+    105.5, 106.7, 106.7, 106.7, 105.7, 106.0, 106.1, 105.8,
+    106.4, 106.0, 106.0, 105.3, 105.6, 104.4, 104.4, 105.5,
+    104.3, 104.3, 105.5, 105.0, 105.5, 104.6, 103.5, 103.8,
+    103.8, 104.8, 104.8, 104.5, 104.3, 104.0, 104.0, 105.0,
+    104.6, 104.0, 104.6, 103.8, 104.4, 104.4, 104.4, 105.0,
+    103.8, , , , , , 105.2, , , 104.9, 105, 104.7,
+  ],
+];
+
 const data = {
   labels: labels,
   datasets: [
@@ -115,53 +157,19 @@ const data = {
       label: 'Boy',
       backgroundColor: 'rgb(0, 159, 0)',
       borderColor: 'rgb(0, 159, 0)',
-      data: [
-        80.45, 80.45, 78.60, 78.85, 78.70, 78.35, 78.80,
-        79.25, 79.25, 78.90, 78.70, 78.60, 78.20, 78.20,
-        78.70, 78.45, 78.00, 77.65, 77.65, 77.90, 77.55,
-        77.65, 78.05, 77.85, 78.00, 77.30, 76.75, 76.75,
-        76.75, 77.30, 76.70, 76.10, 76.60, 77.40, 76.65,
-        76.70, 76.40, 76.05, 75.90, 75.80, 75.65, 74.95,
-        76.00, 76.10, 76.20, 75.35, 75.55, 75.20, 74.55,
-        75.20, 75.15, 74.75, 74.75, 74.45, 74.70, 74.70,
-        74.80, 74.60, 74.85, 74.30, 74.20, 74.60, 74.15,
-        74.15, 74.95, 74.15, 74.30, 74.45, 74.10, 74.10,
-        74.45, 74.65, 74.65, 73.90, 73.80, 73.40, 73.70,
-        74.05, 73.75, 73.75, 73.65, 73.70, 73.70, 74.20,
-        74.15, 75.00, 74.05, 73.85, 73.55, 73.80, 73.40,
-        73.85, 75.10, 74.55, 73.75
-      ],
+      data: usersData[0]
     },
     {
       label: 'Cebola',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [
-        , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-        , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-        , , , , , , , , , , , , ,
-        73.1, 73.1, 73.7, 73.7, 73.3, 72.9, 72.4, 72.4, 72.4,
-        72.4, 72.9, 72.9, 72.9, 72.4, 72.2, 72.4, 72.4, 72.5,
-        72.5, 72.3, 72.6, 72.4, 72.4, 72.0, 72.0, 71.9, 71.9,
-        71.6, 71.8, 71.9, 71.9, , 72.2, 71.8, 71.5, 71.6,
-        71.5, 71.4
-      ],
+      data: usersData[1]
     },
     {
       label: 'Iaguin',
       backgroundColor: 'rgb(0, 99, 132)',
       borderColor: 'rgb(0, 99, 132)',
-      data: [
-        , , , , , , , , , , , , , , , , , , , , , , , , , , ,
-        , , , , , , , , , , , , , , , , , ,
-        109.0, 107.6, 107.0, 107.0, 107.0, 108.0, 107.8, 105.8,
-        105.5, 106.7, 106.7, 106.7, 105.7, 106.0, 106.1, 105.8,
-        106.4, 106.0, 106.0, 105.3, 105.6, 104.4, 104.4, 105.5,
-        104.3, 104.3, 105.5, 105.0, 105.5, 104.6, 103.5, 103.8,
-        103.8, 104.8, 104.8, 104.5, 104.3, 104.0, 104.0, 105.0,
-        104.6, 104.0, 104.6, 103.8, 104.4, 104.4, 104.4, 105.0,
-        103.8, , , , , , 105.2, , , 104.9, 105, 104.7,
-      ],
+      data: usersData[2]
     }]
 };
 
@@ -183,7 +191,8 @@ const config = {
         }
       },
       tooltip: {
-        external: customTooltip
+        external: customTooltip,
+        enabled: false
       }
     }
 
@@ -204,7 +213,7 @@ function customTooltip(context) {
   if (!tooltipEl) {
     tooltipEl = document.createElement('div');
     tooltipEl.id = 'chartjs-tooltip';
-    tooltipEl.innerHTML = '<table></table>';
+    tooltipEl.innerHTML = '<div class="chartjs-tooltip"></div>';
     document.body.appendChild(tooltipEl);
   }
 
@@ -232,24 +241,45 @@ function customTooltip(context) {
     var titleLines = tooltipModel.title || [];
     var bodyLines = tooltipModel.body.map(getBody);
 
-    var innerHtml = '<thead>';
+    var innerHtml = '<div>';
 
     titleLines.forEach(function (title) {
-      innerHtml += '<tr><th>' + title + '</th></tr>';
+      innerHtml += '<div class="chartjs-tooltip__title">' + title + '</div>';
     });
-    innerHtml += '</thead><tbody>';
+    innerHtml += '<div class="chartjs-tooltip__information">';
+
 
     bodyLines.forEach(function (body, i) {
+      var dataIndex = tooltipModel.dataPoints[i].dataIndex;
+
+      if (dataIndex != 0) {
+        var lastData = tooltipModel.dataPoints[i].dataset.data[dataIndex - 1];
+      } else {
+        var lastData = tooltipModel.dataPoints[i].dataset.data[dataIndex];
+      }
+
+      if (lastData == undefined) {
+        var lastData = tooltipModel.dataPoints[i].dataset.data[dataIndex];
+      }
+
+      var changeInPercent = (lastData - tooltipModel.dataPoints[i].dataset.data[dataIndex]).toFixed(2);
+
+      if (changeInPercent > 0) {
+        var changeElement = `<span class="chartjs-tooltip__user-percent"> (+${changeInPercent}kg)</span>`;
+      } else {
+        var changeElement = `<span class="chartjs-tooltip__user-percent"> (${changeInPercent}kg)</span>`;
+      }
+
       var colors = tooltipModel.labelColors[i];
       var style = 'background:' + colors.backgroundColor;
       style += '; border-color:' + colors.borderColor;
-      style += '; border-width: 2px';
-      var span = '<span style="' + style + '"></span>';
-      innerHtml += '<tr><td>' + span + body + '</td></tr>';
+      var span = '<span class="chartjs-tooltip__user-color" style="' + style + '"></span>';
+      innerHtml += '<div class="chartjs-tooltip__user">' + span + '<span class="chartjs-tooltip__user-value">' + body + 'kg' + changeElement + '</span></div>';
     });
-    innerHtml += '</tbody>';
 
-    var tableRoot = tooltipEl.querySelector('table');
+    innerHtml += '</div></div>';
+
+    var tableRoot = tooltipEl.querySelector('.chartjs-tooltip');
     tableRoot.innerHTML = innerHtml;
   }
 
